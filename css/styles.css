@@ -7,6 +7,9 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 body {
   width: 100%;
   height: 100vh;
@@ -942,7 +945,7 @@ form button {
 }
 .container_ubiacion {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   width: 90%;
   margin: auto;
@@ -1251,7 +1254,6 @@ footer {
 }
 .item-opinion {
   position: relative;
-  margin-bottom: -35px;
 }
 .item-opinion:nth-child(1) {
   display: flex;
@@ -1265,10 +1267,10 @@ footer {
   transition: 0.5s;
 }
 .container-opiniones {
-  width: 80%;
+  width: 95%;
+  display: flex;
   gap: 20px;
-
-  margin: 15px auto 0px auto;
+  margin-bottom: 50px;
 }
 .opiniones {
   width: 100%;
@@ -1380,7 +1382,7 @@ footer {
   font-size: 1.1em;
   margin: auto;
   position: absolute;
-  bottom: 70px;
+  bottom: -20px;
   width: 150px;
   left: 40%;
   border-radius: 10px;
@@ -1394,17 +1396,75 @@ footer {
   overflow: hidden;
   transition: 0.5s;
   position: relative;
-  margin: 100px auto 0px 40px;
+  margin-left: 0px;
   gap: 20px;
-}
-.aparecer {
-  height: auto;
-  overflow: visible;
-  transition: 0.5s;
 }
 
 /*hide*/
 /*opiniones*/
+/*index-modal*/
+.index-modal {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999;
+  transform: scale(0);
+  transform-origin: top left;
+  transition: 1s;
+}
+.show-index-modal {
+  transform: scale(1);
+  transform-origin: top left;
+  transition: 1s;
+}
+.index-modal h2 {
+  color: #fff;
+  font-size: 1.7em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.index-modal i {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #fff;
+  font-size: 30px;
+}
+.container-index-modal {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+}
+.item-index-modal img {
+  max-width: 100%;
+}
+.item-index-modal {
+  width: 100%;
+}
+.index-modal a {
+  background-color: #009ec0;
+  display: block;
+  text-align: center;
+  width: 170px;
+  color: #fff;
+  margin: auto;
+  padding: 10px 5px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+/*index-modal*/
 
 @media (max-width: 767px) {
   .doctores {
@@ -1452,11 +1512,6 @@ footer {
     position: relative;
 
     gap: 20px;
-  }
-  .aparecer {
-    height: auto;
-    overflow: visible;
-    transition: 0.5s;
   }
 
   .button-menu {
@@ -2325,6 +2380,69 @@ footer {
   .promociones h2 {
     font-size: 22px;
   }
+    /*index-modal*/
+  .index-modal {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+    transform: scale(0);
+    transform-origin: top left;
+    transition: 1s;
+  }
+  .show-index-modal {
+    transform: scale(1);
+    transform-origin: top left;
+    transition: 1s;
+  }
+  .index-modal h2 {
+    margin-top: 35px;
+    color: #fff;
+    font-size: 1em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .index-modal i {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #fff;
+    font-size: 30px;
+  }
+  .container-index-modal {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: auto;
+    text-align: center;
+    margin-top: 15px;
+  }
+  .item-index-modal img {
+    max-width: 50%;
+  }
+  .item-index-modal {
+    width: 100%;
+  }
+  .index-modal a {
+    background-color: #009ec0;
+    display: block;
+    width: 170px;
+    color: #fff;
+    margin: auto;
+    padding: 10px 5px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    text-decoration: none;
+  }
+  /*index-modal*/
 }
 @media (max-width: 480px) {
   .paralax {
