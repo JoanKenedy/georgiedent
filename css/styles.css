@@ -945,7 +945,7 @@ form button {
 }
 .container_ubiacion {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   width: 90%;
   margin: auto;
@@ -1464,6 +1464,15 @@ footer {
   font-size: 1.2em;
   text-decoration: none;
 }
+
+.banner-movil {
+  display: none;
+  width: 100%;
+}
+
+.banner-movil img {
+  max-width: 80%;
+}
 /*index-modal*/
 
 @media (max-width: 767px) {
@@ -1943,6 +1952,14 @@ footer {
     color: #186ac1;
     font-size: 17px;
     font-weight: 900;
+  }
+
+  .banner-movil {
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
   }
 
   .card {
@@ -2430,6 +2447,7 @@ footer {
   }
   .item-index-modal {
     width: 100%;
+    display: none;
   }
   .index-modal a {
     background-color: #009ec0;
