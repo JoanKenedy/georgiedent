@@ -121,9 +121,15 @@ header {
   padding-bottom: 10px;
   position: relative;
 }
+.logo_nav a {
+  background-color: white;
+  border-radius: 50%;
+  border: 10px solid #2ec7e9;
+  z-index: 99;
+}
 .logo_nav a img {
-  height: 120px;
-  width: 120px;
+  height: 90px;
+  width: 90px;
   object-fit: contain;
 }
 .menu {
@@ -1651,7 +1657,9 @@ footer {
     font-size: 22px;
   }
   .logo_nav a img {
-    max-width: 80%;
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
   }
 
   .tarjetas p {
@@ -1766,12 +1774,9 @@ footer {
 
     margin-right: -40px;
   }
-  .logo_nav img {
-    max-width: 45%;
-  }
   .menu {
     position: absolute;
-    bottom: -197px;
+    bottom: -160px;
     z-index: 999;
     display: -webkit-box;
     display: -ms-flexbox;
