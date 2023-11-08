@@ -293,11 +293,12 @@ header {
 .container-promociones {
   width: 90%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(300px, 400px));
   gap: 20px;
   padding: 10px 50px;
   text-align: center;
   margin: 20px auto;
+  justify-content: center;
 }
 
 .item-promociones img {
