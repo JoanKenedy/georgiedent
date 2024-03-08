@@ -33,6 +33,6 @@ function muestraSlides(n) {
     barras[i].className = barras[i].className.replace(" active", "");
   }
 
-  slides[indice - 1].style.display = "block";
+  slides[indice - 1].style.display = "grid";
   barras[indice - 1].className += " active";
 }

@@ -8,3 +8,7 @@ function myModal() {
     indexModal.classList.remove("show-index-modal");
   });
 }
+const cerrarModal = document.getElementById("cerrarModal");
+cerrarModal.addEventListener("click", () => {
+    indexModal.classList.remove("show-index-modal");
+  });
