@@ -19,8 +19,19 @@ btnContacto.addEventListener("click", function () {
   contacto.style.display = "none";
 });
 
-let btnC = document.getElementById("hide-button");
-let opinion = document.getElementById("opiniones-hide");
-btnC.addEventListener("click", () => {
-  opinion.classList.toggle("aparecer");
+let listElements = document.getElementById("hide-button");
+let verMas = document.getElementById("mas");
+
+listElements.addEventListener("click", () => {
+  let height = 0;
+
+  let menu = listElements.nextElementSibling;
+  if (menu.clientHeight == "0") {
+    height = menu.scrollHeight;
+    verMas.innerText = "Ver menos";
+  } else {
+    verMas.innerHTML = "Ver más";
+  }
+
+  menu.style.height = `${height}px`;
 });
